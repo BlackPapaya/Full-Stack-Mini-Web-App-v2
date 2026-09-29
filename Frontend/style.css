@@ -1,12 +1,18 @@
 h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-style: Arial, sans-serif;
 
 }
 
 body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: lightblue;
-    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 input {
@@ -14,7 +20,95 @@ input {
     font-size:30px;
 }
 
+
+#loginSection, #editorSection {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 550px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 button {
-    font-size:20px;
-    font-color: red;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(96, 96, 179);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0052a3;
+}
+
+
+img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+p {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box; 
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+#editorSection {
+    display: none;
+}
+
+#editorSection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px; 
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit; 
+    resize: vertical; 
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    border-color: #0066cc;
+    outline: none;
 }

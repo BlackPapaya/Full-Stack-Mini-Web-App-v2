@@ -1,3 +1,37 @@
+
+//LOGIN LOGIC
+
+document.getElementById("loginBtn").addEventListener("click", async function() {
+
+    const userVal = document.getElementById("usernameInput").value;
+    const passVal = document.getElementById("passwordInput").value;
+
+    try {
+        const response = await fetch("http://localhost:8080/api/login", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({username: userVal, password: passVal})
+        });
+
+        if (response.ok) {
+
+            document.getElementById("loginSection").style.display = "none";
+            document.getElementById("editorSection").style.display = "block";
+        } else {
+            document.getElementById("errorMsg").innerText = "wrong username or password";
+        }
+    } catch (error) {
+        console.error("Connection Error", error);
+        document.getElementById("errorMsg").innerText = "Server unreachable";
+    }
+
+
+});
+
+
+
+
+
 document.getElementById("downloadBtn").addEventListener("click", function() {       //Wait till User clicks on the Download Button
     const textValue = document.getElementById("text").value;           //saving the text as a constant var                           
 
